@@ -40,3 +40,40 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// update img src for header
+let headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src','img/header-img.png')
+
+
+//update img src for middle img
+let midImg=document.getElementById("middle-img");
+midImg.src='img/mid-page-accent.jpg'
+
+//update Dom is Awesome
+const domISAwesome=document.createElement('h1');
+domISAwesome.textContent='DOM is Awesome!';
+domISAwesome.style.fontSize='4 rem';
+domISAwesome.style.alignItems='center';
+
+let domSection= document.querySelector('.cta div');
+domSection.prepend(domISAwesome);
+
+// DOM button
+let domBtn=document.querySelector('.cta div button');
+domBtn.textContent='Get Started';
+domBtn.style.color='black';
+
+// contact
+const contacth4=document.querySelector('.contact h4');
+contacth4.textContent='Contact';
+contacth4.style.color='black';
+contacth4.style.justifyContent='right';
+contacth4.style.fontSize='1.5 rem';
+
+//footer
+const crFooter=document.querySelector(' footer p');
+crFooter.textContent='Copyright Great Idea! 2018';
+crFooter.style.color='black';
+crFooter.style.justifyContent='center';
+
