@@ -41,3 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// update img src for header
+let headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src','img/header-img.png')
+
+
+//update img src for middle img
+let midImg=document.getElementById("middle-img");
+midImg.src='img/mid-page-accent.jpg'
+
+//update Dom is Awesome
+const domISAwesome=document.createElement('h1');
+domISAwesome.textContent='DOM is Awesome!';
+domISAwesome.style.fontSize='4 rem';
+domISAwesome.style.alignItems='center';
+
+let domSection= document.querySelector('.cta div');
+domSection.prepend(domISAwesome);
+
+
