@@ -59,4 +59,21 @@ domISAwesome.style.alignItems='center';
 let domSection= document.querySelector('.cta div');
 domSection.prepend(domISAwesome);
 
+// DOM button
+let domBtn=document.querySelector('.cta div button');
+domBtn.textContent='Get Started';
+domBtn.style.color='black';
+
+// contact
+const contacth4=document.querySelector('.contact h4');
+contacth4.textContent='Contact';
+contacth4.style.color='black';
+contacth4.style.justifyContent='right';
+contacth4.style.fontSize='1.5 rem';
+
+//footer
+const crFooter=document.querySelector(' footer p');
+crFooter.textContent='Copyright Great Idea! 2018';
+crFooter.style.color='black';
+crFooter.style.justifyContent='center';
 
