@@ -41,108 +41,38 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const siteContent = {
-  "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
-    "img-src": "img/logo.png"
-  },
-  "cta": {
-    "h1": "DOM Is Awesome",
-    "button": "Get Started",
-    "img-src": "img/header-img.png"
-  },
-  "main-content": {
-    "features-h4":"Features",
-    "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
-    "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
-    "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
-    "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
-    "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-  },
-  "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
-  },
-  "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
-  },
-};
+// update img src for header
+let headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src','img/header-img.png')
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// REMEMBER, you can accomplish the assignment in many different ways. You could literally use getElementByTag name to accomplish everything if you wanted:
+//update img src for middle img
+let midImg=document.getElementById("middle-img");
+midImg.src='img/mid-page-accent.jpg'
 
-// Update the nav links test
-let selectedNavLinks = document.querySelectorAll("nav a");
-selectedNavLinks.forEach((link, i) => {
-  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
-})
+//update Dom is Awesome
+const domISAwesome=document.createElement('h1');
+domISAwesome.textContent='DOM is Awesome!';
+domISAwesome.style.fontSize='4 rem';
+domISAwesome.style.alignItems='center';
 
-// Update CTA
-let ctaText = document.getElementsByClassName("cta-text")[0];
+let domSection= document.querySelector('.cta div');
+domSection.prepend(domISAwesome);
 
-ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
-ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+// DOM button
+let domBtn=document.querySelector('.cta div button');
+domBtn.textContent='Get Started';
+domBtn.style.color='black';
 
-let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
-// console.log(document.getElementsByClassName("cta")[0])
+// contact
+const contacth4=document.querySelector('.contact h4');
+contacth4.textContent='Contact';
+contacth4.style.color='black';
+contacth4.style.justifyContent='right';
+contacth4.style.fontSize='1.5 rem';
 
-// Update MainContent
-let textContentList = document.querySelectorAll(".text-content");
-
-textContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
-textContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
-textContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
-textContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
-textContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
-textContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
-textContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
-textContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
-textContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
-textContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
-
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
-
-// Update Contact
-let contact = document.getElementsByClassName("contact")[0];
-contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
-contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
-contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
-contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
-
-// Update Footer
-let footer = document.querySelector("footer");
-footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
-
-// Add New Content
-// Change navigation text color
-selectedNavLinks.forEach((link,i) => {
-  link.style.color = "green";
-})
-
-// Add two items to navigation
-selectedNavLinks = document.getElementsByTagName("nav")[0];
-let createNewNode = (name) => {
-  let newNode = document.createElement("a");
-  newNode.innerHTML = name;
-  return newNode;
-}
-selectedNavLinks.prepend(createNewNode("Extra Item 1"));
-selectedNavLinks.append(createNewNode("Extra Item 2"));
-
+//footer
+const crFooter=document.querySelector(' footer p');
+crFooter.textContent='Copyright Great Idea! 2018';
+crFooter.style.color='black';
+crFooter.style.justifyContent='center';
