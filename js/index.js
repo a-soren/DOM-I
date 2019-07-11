@@ -76,3 +76,27 @@ const crFooter=document.querySelector(' footer p');
 crFooter.textContent='Copyright Great Idea! 2018';
 crFooter.style.color='black';
 crFooter.style.justifyContent='center';
+
+// main content top
+
+// features
+const mainTextHeader=document.querySelector('.main-content h4');
+mainTextHeader.textContent='Features';
+
+const mainTextP=document.querySelector('.main-content p')
+mainTextP.textContent='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ipsum est, lacinia sit amet consectetur at, hendrerit tempus urna. Suspendisse scelerisque nunc neque, vitae aliquet nisi vulputate nec. Sed luctus porta nulla ac ullamcorper. Vestibulum eget est scelerisque urna fringilla feugiat. Etiam justo lorem, rhoncus sit amet lectus vehicula, interdum dignissim nunc. Nunc enim ante, tincidunt et suscipit non, gravida vel velit. Mauris eu sem condimentum, elementum purus eget, dignissim libero. Proin tortor ex, sodales porttitor orci quis, pulvinar mattis augue. Curabitur porttitor justo non est vulputate imperdiet.';
+
+
+// About
+
+const mainAboutHeader=document.querySelector('.main-content h4:last-of-class');
+mainAboutHeader.textContent='About';
+
+// services
+const bottomServicesHeader=document.querySelector('.bottom-content h4');
+bottomServicesHeader.textContent='Services';
+
+// Product
+
+// Vision
+
